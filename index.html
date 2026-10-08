@@ -1,0 +1,1920 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Abu Omaer Limon | SEO Expert Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0c;
+      --bg-secondary: #121216;
+      --bg-card: #18181f;
+      --bg-card-hover: #22222c;
+      --accent-red: #E50914;
+      --accent-red-hover: #ff1f2d;
+      --accent-red-glow: rgba(229, 9, 20, 0.28);
+      --accent-red-subtle: rgba(229, 9, 20, 0.12);
+      --text-main: #f5f5f7;
+      --text-muted: #9e9ea7;
+      --text-subtle: #6e6e78;
+      --border-color: #272732;
+      --border-accent: rgba(229, 9, 20, 0.45);
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--bg-primary);
+      position: relative;
+    }
+
+    /* Subtle background grid pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, .font-heading {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.75rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-red);
+      background: var(--accent-red-subtle);
+      border: 1px solid var(--border-accent);
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.45rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-red);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--accent-red-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-red-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(229, 9, 20, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1.1rem;
+      font-size: 0.85rem;
+    }
+
+    /* 1. NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(10, 10, 12, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .brand-dot {
+      color: var(--accent-red);
+    }
+
+    .brand-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: var(--accent-red);
+      color: #fff;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      margin-left: 0.2rem;
+    }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      list-style: none;
+      gap: 1.75rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ffffff;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent-red);
+      border-radius: 2px;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    /* Mobile Hamburger */
+    .hamburger-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .hamburger-btn span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-main);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger-btn.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-btn.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile drawer */
+    .mobile-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(14, 14, 18, 0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+      transform: translateY(-120%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+      z-index: 99;
+    }
+
+    .mobile-nav.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .mobile-nav-link:hover, .mobile-nav-link.active {
+      color: var(--accent-red);
+      transform: translateX(4px);
+    }
+
+    @media (min-width: 992px) {
+      .nav-menu {
+        display: flex;
+      }
+      .nav-cta {
+        display: inline-flex;
+      }
+      .hamburger-btn {
+        display: none;
+      }
+    }
+
+    /* 2. HERO SECTION */
+    .hero-section {
+      padding: 3rem 0 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow-bg {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, var(--accent-red-glow) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3.5rem;
+      }
+      .hero-section {
+        padding: 5rem 0 6.5rem;
+      }
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(229, 9, 20, 0.08);
+      border: 1px solid var(--border-accent);
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-red);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-red);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .hero-subtitle-small {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-name {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      color: #ffffff;
+    }
+
+    @media (min-width: 768px) {
+      .hero-name {
+        font-size: 3.35rem;
+      }
+    }
+
+    .hero-title-role {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-red);
+      margin-bottom: 1.25rem;
+      min-height: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.2em;
+      background-color: var(--accent-red);
+      vertical-align: middle;
+      animation: blink 0.9s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .hero-desc {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+
+    /* Hero Right - Image Frame */
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-frame-container {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .hero-glow-border {
+      position: relative;
+      border-radius: 24px;
+      padding: 8px;
+      background: linear-gradient(135deg, rgba(229, 9, 20, 0.6) 0%, rgba(35, 35, 45, 0.4) 50%, rgba(229, 9, 20, 0.2) 100%);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 32px var(--accent-red-glow);
+      transition: var(--transition);
+    }
+
+    .hero-glow-border:hover {
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 45px rgba(229, 9, 20, 0.45);
+    }
+
+    .hero-image-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #111;
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1.15 / 1;
+      transform: scale(1.01);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-glow-border:hover .hero-img {
+      transform: scale(1.03);
+    }
+
+    /* Floating SEO Badges */
+    .seo-pill-tag {
+      position: absolute;
+      background: rgba(18, 18, 24, 0.92);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 0.95rem;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      z-index: 2;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .seo-pill-tag .pill-icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+    }
+
+    .seo-pill-tag.pill-1 {
+      top: -12px;
+      right: 12px;
+      animation-delay: 0s;
+    }
+
+    .seo-pill-tag.pill-2 {
+      bottom: -15px;
+      left: 10px;
+      animation-delay: 1.5s;
+    }
+
+    .seo-pill-tag.pill-3 {
+      top: 45%;
+      left: -22px;
+      animation-delay: 2.2s;
+    }
+
+    .seo-pill-tag.pill-4 {
+      bottom: 25%;
+      right: -15px;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 640px) {
+      .seo-pill-tag.pill-3 {
+        left: 4px;
+        top: 38%;
+      }
+      .seo-pill-tag.pill-4 {
+        right: 4px;
+        bottom: 20%;
+      }
+    }
+
+    /* 3. ABOUT SECTION */
+    .about-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .about-focus-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.5rem;
+    }
+
+    .focus-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .focus-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-red);
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .about-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1.75rem;
+      right: 1.75rem;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+    }
+
+    .about-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #fff;
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.92rem;
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-label {
+      color: var(--text-subtle);
+      font-weight: 500;
+    }
+
+    .info-val {
+      color: var(--text-main);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .info-badge {
+      background: var(--accent-red-subtle);
+      color: var(--accent-red);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      border: 1px solid var(--border-accent);
+    }
+
+    /* 4. SKILLS SECTION */
+    .skills-section {
+      padding: 5rem 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .skills-grid .skill-card:nth-child(4) {
+        grid-column: 1 / 2;
+      }
+      .skills-grid .skill-card:nth-child(5) {
+        grid-column: 2 / 3;
+      }
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skill-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-red-subtle);
+    }
+
+    .skill-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--accent-red-subtle);
+      border: 1px solid var(--border-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+    }
+
+    .skill-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .skill-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* 5. SERVICES SECTION */
+    .services-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 24px var(--accent-red-subtle);
+    }
+
+    .service-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--accent-red-subtle);
+      border: 1px solid var(--border-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+      margin-bottom: 1.25rem;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .service-btn {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    /* 6. EDUCATION & TRAINING SECTION */
+    .education-section {
+      padding: 5rem 0;
+    }
+
+    .timeline-container {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 7px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-red) 0%, rgba(229, 9, 20, 0.2) 100%);
+    }
+
+    .timeline-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      transition: var(--transition);
+    }
+
+    .timeline-card:hover {
+      border-color: var(--border-accent);
+      transform: translateX(4px);
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 1.75rem;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-red);
+      border: 3px solid var(--bg-primary);
+      box-shadow: 0 0 10px var(--accent-red);
+    }
+
+    .timeline-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-red);
+      background: var(--accent-red-subtle);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.6rem;
+    }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-org {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-meta {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .timeline-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* 7. SEO PROCESS SECTION */
+    .process-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .process-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.6);
+    }
+
+    .process-num {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--accent-red);
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .process-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .process-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    /* 8. CTA SECTION */
+    .cta-section {
+      padding: 5.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #181214 0%, #111116 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(229, 9, 20, 0.15);
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, var(--accent-red-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+      color: #fff;
+    }
+
+    @media (min-width: 768px) {
+      .cta-title {
+        font-size: 2.6rem;
+      }
+    }
+
+    .cta-text {
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+
+    /* 9. CONTACT SECTION */
+    .contact-section {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 860px) {
+      .contact-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+      }
+    }
+
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-card-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+    }
+
+    .contact-identity-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-identity-role {
+      color: var(--accent-red);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-identity-institute {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-form-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      color: var(--text-main);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: rgba(10, 10, 12, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-red);
+      box-shadow: 0 0 0 3px var(--accent-red-subtle);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-status {
+      display: none;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .form-status.success {
+      display: block;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+    }
+
+    .form-status.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #f87171;
+    }
+
+    /* 10. FOOTER */
+    .footer {
+      background: #08080a;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 2.5rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-tags {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-red);
+      letter-spacing: 0.08em;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      color: var(--accent-red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 90;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-red);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* Scroll reveal transitions */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Limon SEO Homepage">
+        Limon SEO<span class="brand-dot">.</span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li class=""><a href="#hero" class="nav-link active">Home</a></li>
+        <li class=""><a href="#about" class="nav-link">About</a></li>
+        <li class=""><a href="#skills" class="nav-link">Skills</a></li>
+        <li class=""><a href="#services" class="nav-link">Services</a></li>
+        <li class=""><a href="#education" class="nav-link">Education</a></li>
+        <li class=""><a href="#process" class="nav-link">Process</a></li>
+        <li class=""><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Work Together</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav-list">
+        <li class=""><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li class=""><a href="#about" class="mobile-nav-link">About</a></li>
+        <li class=""><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li class=""><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li class=""><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li class=""><a href="#process" class="mobile-nav-link">Process</a></li>
+        <li class=""><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary w-full mobile-cta-btn" style="width: 100%;">Let's Work Together</a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Content -->
+        <div class="hero-content reveal-item revealed">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="">Available for SEO Projects &amp; Freelance</span>
+          </div>
+
+          <p class="hero-subtitle-small">Hello, I'm</p>
+          <h1 class="hero-name">Md Abu Omaer Limon</h1>
+
+          <div class="hero-title-role">
+            <span id="typingRole" class="">Technical SEO A</span><span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-desc">With over 2+ years of hands-on experience, I help businesses and websites scale their organic traffic with practical SEO strategies, technical audits, and WordPress optimizations.</p>
+
+          <div class="hero-actions">
+            <a href="#skills" class="btn btn-primary">
+              View My Skills
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Image -->
+        <div class="hero-image-wrap reveal-item revealed">
+          <div class="hero-frame-container">
+            <!-- Decorative SEO Pills -->
+            <div class="seo-pill-tag pill-1">
+              <span class="pill-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </span>
+              <span class="">SEO</span>
+            </div>
+
+            <div class="seo-pill-tag pill-2">
+              <span class="pill-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8v8m-4-5v5m-4-2v2m-2 4h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </span>
+              <span class="">Analytics</span>
+            </div>
+
+            <div class="seo-pill-tag pill-3">
+              <span class="pill-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"></path>
+                </svg>
+              </span>
+              <span class="">WordPress</span>
+            </div>
+
+            <div class="seo-pill-tag pill-4">
+              <span class="pill-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </span>
+              <span class="">Google</span>
+            </div>
+
+            <!-- Profile image box -->
+            <div class="hero-glow-border">
+              <div class="hero-image-card">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdpZALOv5gSLfMukXTFLcDqA9xD_V0a8VBpVAJImL2xvm2vKRykZyThzuaa2xGObkIjdTlQ7t_nJblRjWoBbJulY8ulRPP0-GHEXsTxb3nJoKGQZbKjhG8tLZP1uuFwUhf7q2mNAQl_wyBSUE9csUaPJIfO4YK2vnQGU_MzwBohRG4RHu6zBbBMLrGPilXvqcUyLgDYb5XYVlrTFXmcRP9-VUSWwQ8OiHiYsPl4UNUIkGTAOmSxTn" alt="Md Abu Omaer Limon - SEO Expert" class="hero-img">
+              </div>
+            </div>
+          <div class="seo-pill-tag" style="bottom: -22px; right: 20px; z-index: 4; border-color: var(--accent-red); box-shadow: rgba(229, 9, 20, 0.35) 0px 10px 25px; background: rgba(14, 14, 18, 0.95);"><span class="pill-icon" style="color: var(--accent-red);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span><span style="font-weight: 700; color: #fff;" class=""><strong style="color: var(--accent-red);">2+ Years</strong> Experience</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Profile</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Dedicated search engine optimization practitioner focused on organic growth and clean site architecture.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal-item revealed"><p class="">I’m Md Abu Omaer Limon, an SEO specialist with <strong>2+ years of practical experience</strong> in technical search optimization, keyword ranking, and website architecture. Trained at Creative IT Institute, I blend rigorous technical standards with search intent optimization to produce measurable organic traffic growth.</p><p class="">Over the last 2+ years, I have actively worked across Local SEO, On-Page SEO, Off-Page Link Building, and WordPress CMS tuning, conducting detailed audits and resolving indexing bottlenecks.</p><div class="about-focus-pills"><span class="focus-pill">2+ Years SEO Experience</span><span class="focus-pill">Local SEO</span><span class="focus-pill">On-Page SEO</span><span class="focus-pill">Off-Page SEO</span><span class="focus-pill">Technical SEO</span><span class="focus-pill">WordPress CMS</span></div></div>
+
+        <div class="about-card reveal-item revealed">
+          <h3 class="about-card-title">
+            <svg width="20" height="20" fill="none" stroke="var(--accent-red)" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            Professional Overview
+          </h3>
+          <ul class="info-list"><li class="info-item"><span class="info-label">Name</span><span class="info-val">Md Abu Omaer Limon</span></li><li class="info-item"><span class="info-label">Experience</span><span class="info-val info-badge" style="background: var(--accent-red-subtle); color: var(--accent-red);">2+ Years</span></li><li class="info-item"><span class="info-label">Profession</span><span class="info-val info-badge">SEO Expert</span></li><li class="info-item"><span class="info-label">Institute</span><span class="info-val">Creative IT Institute</span></li><li class="info-item"><span class="info-label">Education</span><span class="info-val">HSC / 12th Pass</span></li><li class="info-item"><span class="info-label">Result</span><span class="info-val">GPA 4.75</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SKILLS SECTION -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Core Competencies</span>
+        <h2 class="section-title">My SEO Skills</h2>
+        <p class="section-subtitle">Specialized technical abilities and targeted strategies for search engine visibility.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skill 1 -->
+        <div class="skill-card reveal-item revealed">
+          <div class="skill-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="">Local SEO</h3>
+          <p class="">Improve local search visibility and optimize local presence.</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-card reveal-item revealed">
+          <div class="skill-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="">On-Page SEO</h3>
+          <p class="">Optimize titles, meta descriptions, headings, content, URLs and page structure.</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-card reveal-item revealed">
+          <div class="skill-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+            </svg>
+          </div>
+          <h3 class="">Off-Page SEO</h3>
+          <p class="">Focus on ethical link building, authority building and off-page optimization.</p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-card reveal-item revealed">
+          <div class="skill-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="">Technical SEO</h3>
+          <p class="">Improve technical website factors, crawlability, indexing and website performance.</p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill-card reveal-item revealed">
+          <div class="skill-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+            </svg>
+          </div>
+          <h3 class="">WordPress</h3>
+          <p class="">SEO-friendly WordPress website setup, optimization and basic website management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Solutions</span>
+        <h2 class="section-title">What I Can Help With</h2>
+        <p class="section-subtitle">Structured SEO assistance designed to identify bottlenecks and elevate ranking factors.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card reveal-item revealed">
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Local SEO</h3>
+            <p class="service-desc">
+              Optimization for Google Business Profile and local search citations to help your brand connect with nearby customers.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm service-btn">Get Started</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal-item revealed">
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">On-Page SEO</h3>
+            <p class="service-desc">
+              Detailed content analysis, meta tag creation, header structuring, keyword mapping, and semantic content tuning.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm service-btn">Get Started</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal-item revealed">
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Off-Page SEO</h3>
+            <p class="service-desc">
+              Sustainable link acquisition strategies, anchor text balance, and ethical brand signal creation for domain authority.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm service-btn">Get Started</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal-item revealed">
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Technical SEO</h3>
+            <p class="service-desc">
+              Robots.txt, XML sitemap validation, canonical tags, mobile responsiveness check, and crawl error diagnosis.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm service-btn">Get Started</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card reveal-item revealed">
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">WordPress SEO</h3>
+            <p class="service-desc">
+              SEO plugin setup (Yoast/Rank Math), schema markup integration, permalink structuring, and basic speed tweaks.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm service-btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EDUCATION / TRAINING SECTION -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Background</span>
+        <h2 class="section-title">Education &amp; Training</h2>
+        <p class="section-subtitle">Verified academic qualifications and professional skill development coursework.</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Training Card -->
+        <div class="timeline-card reveal-item revealed">
+          <span class="timeline-badge">Professional Training</span>
+          <h3 class="timeline-title">SEO / Digital Marketing Training</h3>
+          <p class="timeline-org">Creative IT Institute</p>
+          <div class="timeline-meta">
+            <span class="">
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+              Creative IT Institute
+            </span>
+            <span class="">Focus: Practical Search Optimization &amp; WordPress</span>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="timeline-card reveal-item revealed">
+          <span class="timeline-badge">Academic Education</span>
+          <h3 class="timeline-title">HSC / 12th Pass</h3>
+          <p class="timeline-org">Dhaka Board</p>
+          <div class="timeline-meta">
+            <span class="">
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Result: GPA 4.75
+            </span>
+            <span class="">Board: Dhaka</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SEO PROCESS SECTION -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Methodology</span>
+        <h2 class="section-title">My SEO Process</h2>
+        <p class="section-subtitle">A methodical four-step workflow to systematically diagnose and elevate organic visibility.</p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card reveal-item revealed">
+          <span class="process-num">01</span>
+          <h3 class="">Analyze</h3>
+          <p class="">Understand the website and identify SEO issues.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card reveal-item revealed">
+          <span class="process-num">02</span>
+          <h3 class="">Optimize</h3>
+          <p class="">Improve on-page, technical and local SEO elements.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card reveal-item revealed">
+          <span class="process-num">03</span>
+          <h3 class="">Build</h3>
+          <p class="">Work on off-page SEO and website authority.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card reveal-item revealed">
+          <span class="process-num">04</span>
+          <h3 class="">Improve</h3>
+          <p class="">Monitor results and continue optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA SECTION -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box reveal-item revealed">
+        <h2 class="cta-title">Ready to Improve Your Website's SEO?</h2>
+        <p class="cta-text">Let's discuss your website and find practical ways to improve its SEO.</p>
+        <a href="#contact" class="btn btn-primary">
+          Contact Me
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-item revealed">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Send a message to discuss audits, WordPress setup, or ongoing search optimization.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details -->
+        <div class="contact-info-panel reveal-item revealed">
+          <div class="contact-card-box">
+            <h3 class="contact-identity-name">Md Abu Omaer Limon</h3>
+            <p class="contact-identity-role">SEO Expert</p>
+            <p class="contact-identity-institute">
+              <svg width="18" height="18" fill="none" stroke="var(--accent-red)" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+              Creative IT Institute
+            </p>
+          </div>
+
+          <div class="contact-card-box">
+            <h4 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: #fff;" class="">Direct Inquiry Note</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;" class="">
+              Whether you are preparing a newly built WordPress site for search indexing or need an audit for your local business profile, feel free to submit the form.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-panel reveal-item revealed">
+          <div id="formStatus" class="form-status"></div>
+
+          <form id="contactForm" novalidate="">
+            <div class="form-group">
+              <label for="userName" class="form-label">Your Name</label>
+              <input type="text" id="userName" name="name" class="form-control" placeholder="Enter your full name" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail" class="form-label">Email Address</label>
+              <input type="email" id="userEmail" name="email" class="form-control" placeholder="name@example.com" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="userMessage" class="form-label">Message</label>
+              <textarea id="userMessage" name="message" class="form-control" placeholder="Tell me about your website or SEO goals..." required=""></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-copy">© 2026 Md Abu Omaer Limon. All Rights Reserved.</p>
+      <p class="footer-tags">SEO | WordPress | Digital Marketing</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Hamburger Menu Toggle
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-cta-btn');
+
+      if (hamburgerBtn && mobileNav) {
+        hamburgerBtn.addEventListener('click', () => {
+          const isOpen = mobileNav.classList.toggle('open');
+          hamburgerBtn.classList.toggle('active');
+          hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 2. Typing animation for Hero Title
+      const typingRole = document.getElementById('typingRole');
+      const phrases = ["SEO Expert", "WordPress SEO Specialist", "Local SEO Optimizer", "Technical SEO Analyst"];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typeSpeed = 100;
+
+      function typeLoop() {
+        const currentText = phrases[phraseIndex];
+        if (isDeleting) {
+          typingRole.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          typeSpeed = 45;
+        } else {
+          typingRole.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+          typeSpeed = 95;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+          typeSpeed = 1800; // Pause at full word
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          typeSpeed = 400; // Pause before typing new word
+        }
+
+        setTimeout(typeLoop, typeSpeed);
+      }
+      if (typingRole) {
+        setTimeout(typeLoop, 800);
+      }
+
+      // 3. Scroll Reveal Animation
+      const revealItems = document.querySelectorAll('.reveal-item');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealItems.forEach(el => revealObserver.observe(el));
+
+      // 4. Active Navigation Link on Scroll
+      const sections = document.querySelectorAll('section[id], header[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 120;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // 5. Back to Top Button
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // 6. Contact Form Validation
+      const contactForm = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nameInput = document.getElementById('userName');
+          const emailInput = document.getElementById('userEmail');
+          const messageInput = document.getElementById('userMessage');
+
+          const name = nameInput.value.trim();
+          const email = emailInput.value.trim();
+          const message = messageInput.value.trim();
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!name || !email || !message) {
+            formStatus.className = 'form-status error';
+            formStatus.textContent = 'Please complete all required fields before submitting.';
+            return;
+          }
+
+          if (!emailRegex.test(email)) {
+            formStatus.className = 'form-status error';
+            formStatus.textContent = 'Please provide a valid email address.';
+            return;
+          }
+
+          // Simulation of successful contact submission
+          formStatus.className = 'form-status success';
+          formStatus.textContent = `Thank you, ${name}! Your message has been prepared. Md Abu Omaer Limon will get back to you shortly.`;
+          contactForm.reset();
+
+          setTimeout(() => {
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+          }, 6000);
+        });
+      }
+    });
+  </script>
+
+
+
+
+</body></html>
